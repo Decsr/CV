@@ -1,0 +1,10 @@
+# Local personal profile data. Never commit this file.
+site.private.js
+
+# Private documents. Add them locally only when you do not want them public.
+cv.pdf
+
+# Local editor and OS files.
+.vscode/
+.DS_Store
+Thumbs.db

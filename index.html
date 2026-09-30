@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A focused CV and project portfolio.">
+  <title>CV | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="cv">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" data-brand>YOUR NAME</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation"><div data-nav></div></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-space" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-location>LOCATION / AVAILABLE FOR WORK</p>
+          <h1 data-name>Your Name</h1>
+          <p class="hero-role" data-title>Backend Developer &amp; Visual Storyteller</p>
+          <p class="hero-intro" data-intro>Build useful things, understand the details, and leave every system clearer than you found it.</p>
+          <div class="hero-actions"><a class="button button-primary" href="cv.pdf" download>Download CV <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="#projects">View selected work <span aria-hidden="true">↘</span></a></div>
+          <div class="social-links" data-socials></div>
+        </div>
+        <div class="portrait-wrap reveal reveal-delay"><div class="portrait-frame"><img data-profile-image src="assets/profile/profile.jpg" alt="Portrait of Your Name"></div><p class="portrait-note">01 / PROFILE<br><span>Curious by default.</span></p></div>
+      </div>
+    </section>
+
+    <section class="section-space section-line" id="about"><div class="container split-layout reveal"><div><p class="section-kicker">01 — ABOUT</p><h2>A practical mind with a creative eye.</h2></div><div class="about-copy" data-about></div></div></section>
+    <section class="section-space section-line" id="experience"><div class="container reveal"><div class="section-heading"><div><p class="section-kicker">02 — EXPERIENCE</p><h2>Where I have made things.</h2></div><span class="section-index">02 / 06</span></div><div class="timeline" data-experience></div></div></section>
+    <section class="section-space section-line" id="skills"><div class="container reveal"><div class="section-heading"><div><p class="section-kicker">03 — CAPABILITIES</p><h2>Tools for thoughtful work.</h2></div><span class="section-index">03 / 06</span></div><div class="skills-grid" data-skills></div></div></section>
+    <section class="section-space section-line" id="projects"><div class="container reveal"><div class="section-heading"><div><p class="section-kicker">04 — SELECTED WORK</p><h2>Projects with a point of view.</h2></div><span class="section-index">04 / 06</span></div><div class="project-grid" data-projects></div></div></section>
+    <section class="section-space section-line" id="process"><div class="container process-layout reveal"><div><p class="section-kicker">05 — PROCESS</p><h2>Make the problem smaller.</h2></div><div><ol class="process-list" data-process></ol><p class="muted process-note" data-process-note></p></div></div></section>
+
+    <section class="photo-callout section-space section-line"><div class="container photo-callout-inner reveal"><div><p class="section-kicker">SIDE PROJECT / PHOTOGRAPHY</p><h2>Frames from the real world.</h2><p data-photo-intro></p></div><a class="button button-primary" href="photography.html">Open photography <span aria-hidden="true">↗</span></a></div></section>
+    <section class="contact-section section-space" id="contact"><div class="container contact-grid reveal"><div><p class="section-kicker">06 — CONTACT</p><h2>Let’s make something useful.</h2></div><div><p data-contact-line></p><a class="contact-email" data-email-link href="mailto:you@example.com">you@example.com <span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><span data-footer></span><a href="#top">Back to top ↑</a></div></footer>
+  <dialog class="project-dialog" data-project-dialog><button class="dialog-close" type="button" data-dialog-close aria-label="Close project details">×</button><div data-dialog-body></div></dialog>
+  <script src="site.private.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
