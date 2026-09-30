@@ -45,7 +45,7 @@ const PUBLIC_SITE = {
   contactLine: "For a role, collaboration, or a conversation about a project, email is the best place to start."
 };
 
-const SITE = window.SITE_PRIVATE || PUBLIC_SITE;
+const SITE = window.SITE_DATA || window.SITE_PRIVATE || PUBLIC_SITE;
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
