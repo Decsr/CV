@@ -62,18 +62,18 @@ window.SITE_DATA = {
   },
   projects: [
     {
-      name: "Novelle — AI-Powered Multilingual Book Platform",
-      short: "A multilingual book platform with publishing workflows, role-based access, and virtual wallet payments.",
-      role: "Final Capstone Project / Backend Developer",
-      stack: ["C#", "ASP.NET Core", "Entity Framework Core", "SQL Server"],
+      name: "Novelle — AI-Powered Multilingual Novel Platform",
+      short: "A scalable microservice platform for publishing, translating, and monetizing digital novels.",
+      role: "Backend Developer",
+      stack: [".NET 10", "ASP.NET Core", "PostgreSQL", "Redis", "RabbitMQ", "gRPC", "Docker"],
       features: [
-        "Book management, chapter publishing, and translation workflows",
-        "Authentication, authorization, and role-based access control",
-        "Virtual wallet and coin-based payment workflows",
-        "RESTful APIs for core business modules"
+        "Publishing, AI and human translation, glossary, and file storage services",
+        "Translation marketplace with bidding, proposals, escrow, revisions, and approvals",
+        "Chapter purchases, wallets, double-entry ledgers, revenue sharing, and payouts",
+        "Identity, notifications, community interaction, and audit logging"
       ],
-      challenge: "Designing backend services that could support multiple user roles and connected publishing, translation, and payment workflows.",
-      contribution: "Designed SQL Server schemas, implemented RESTful APIs and backend services, optimized data access with Entity Framework Core, and contributed to analysis, testing, and documentation.",
+      challenge: "Coordinating distributed workflows across publishing, translation, marketplace, payment, notification, and audit services while keeping transactions reliable.",
+      contribution: "Built layered API, BLL, and DAL services; implemented gRPC communication with shared Protocol Buffer contracts; used RabbitMQ for domain events and background workers; integrated PostgreSQL, Entity Framework Core, Redis, SeaweedFS/S3, and Docker Compose. Applied JWT authentication, gateway authorization, idempotency checks, health checks, Swagger/OpenAPI, and wrote xUnit, Moq, and FluentAssertions tests.",
       image: "assets/projects/AI Translate.gif",
       github: "https://github.com/decsr",
       demo: ""
