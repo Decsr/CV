@@ -45,7 +45,7 @@ const PUBLIC_SITE = {
   contactLine: "For a role, collaboration, or a conversation about a project, email is the best place to start."
 };
 
-const SITE = window.SITE_DATA || window.SITE_PRIVATE || PUBLIC_SITE;
+let SITE = window.SITE_DATA || window.SITE_PRIVATE || PUBLIC_SITE;
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -168,8 +168,46 @@ function setupReveal() {
   items.forEach((item) => observer.observe(item));
 }
 
-renderNavigation();
-renderShared();
-renderCv();
-renderPhotography();
-setupReveal();
+async function loadSupabaseSite() {
+  const fallback = window.SITE_DATA || window.SITE_PRIVATE || PUBLIC_SITE;
+  const config = window.SUPABASE_CONFIG;
+  if (!config?.url || !config?.key) return fallback;
+
+  const endpoint = `${config.url.replace(/\/+$/, "")}/rest/v1/portfolio_content?select=id,content`;
+  const request = fetch(endpoint, {
+    headers: {
+      apikey: config.key,
+      Authorization: `Bearer ${config.key}`
+    }
+  }).then((response) => {
+    if (!response.ok) throw new Error(`Supabase request failed: ${response.status}`);
+    return response.json();
+  });
+  const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error("Supabase request timed out")), 2500));
+
+  try {
+    const rows = await Promise.race([request, timeout]);
+    if (!Array.isArray(rows) || rows.length === 0) return fallback;
+    const site = { ...fallback };
+    rows.forEach((row) => {
+      if (!row || !row.id) return;
+      if (row.id === "site" && row.content && typeof row.content === "object" && !Array.isArray(row.content)) Object.assign(site, row.content);
+      else site[row.id] = row.content;
+    });
+    return site;
+  } catch (error) {
+    console.warn("Using local portfolio data because Supabase is unavailable.", error);
+    return fallback;
+  }
+}
+
+async function initializeSite() {
+  SITE = await loadSupabaseSite();
+  renderNavigation();
+  renderShared();
+  renderCv();
+  renderPhotography();
+  setupReveal();
+}
+
+initializeSite();
