@@ -44,3 +44,7 @@ Keep the file and folder names unchanged after publishing, because the website u
 ## Important GitHub Pages privacy rule
 
 GitHub Pages is a public website. The local Supabase configuration is ignored in this project. GitHub Pages will therefore use the demo fallback unless you configure a public frontend deployment with the Supabase publishable key. Never place a service-role key, passwords, private addresses, or sensitive documents in frontend files; visitors can download them from the browser.
+
+## Supabase content JSON
+
+Use `portfolio-content.json` when inserting the `site` row in Supabase. Copy the complete file contents into the `content` JSON field. Do not include `window.SITE_DATA =` or a trailing semicolon; those belong to JavaScript, not JSON.
