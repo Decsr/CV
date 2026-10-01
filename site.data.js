@@ -74,7 +74,7 @@ window.SITE_DATA = {
       ],
       challenge: "Designing backend services that could support multiple user roles and connected publishing, translation, and payment workflows.",
       contribution: "Designed SQL Server schemas, implemented RESTful APIs and backend services, optimized data access with Entity Framework Core, and contributed to analysis, testing, and documentation.",
-      image: "assets/projects/novelle.jpg",
+      image: "assets/projects/AI Translate.gif",
       github: "https://github.com/decsr",
       demo: ""
     }
