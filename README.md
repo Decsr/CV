@@ -4,11 +4,11 @@ This is a zero-build static website. Open `index.html` for the CV and `photograp
 
 ## Add your content
 
-Your editable public portfolio content is in `site.data.js`. Both pages load this file, so it can be uploaded manually to GitHub with the rest of the project.
+Your local customized portfolio data is in `site.data.js`. It is ignored because it contains personal contact information. The committed `site.js` fallback contains demo content only.
 
-For local-only private testing, you can still copy `site.private.example.js` to `site.private.js`. The renderer will use `site.data.js` first, then `site.private.js` as a fallback. `site.private.js` is ignored by Git and must never be committed.
+For local-only private testing, keep `site.data.js`, `site.private.js`, and `supabase-config.js` in the project folder. All three are ignored by Git and must never be committed.
 
-The committed `site.js` contains only fallback demo content. Remember that anything inside `site.data.js`, including your email, phone, CV, and images, becomes public when uploaded to GitHub Pages.
+The committed `site.js` contains only fallback demo content. Your local data and credentials stay outside the repository.
 
 ## Add images and the CV PDF
 
@@ -33,13 +33,14 @@ Then open `http://localhost:8000`.
 ## Publish with GitHub Pages
 
 1. Create a new GitHub repository.
-2. Upload `index.html`, `photography.html`, `styles.css`, `site.js`, `site.data.js`, `README.md`, `cv.pdf` if you want the download button to work, and the `assets` folder.
-3. In GitHub, open **Settings > Pages**.
-4. Set the source to **Deploy from a branch**, choose `main`, and choose `/ (root)`.
-5. Save and wait for GitHub to provide the public URL.
+2. Upload `index.html`, `photography.html`, `styles.css`, `site.js`, `README.md`, and public assets.
+3. Do not upload `site.data.js`, `site.private.js`, `supabase-config.js`, `cv.pdf`, or anything inside private folders.
+4. In GitHub, open **Settings > Pages**.
+5. Set the source to **Deploy from a branch**, choose `main`, and choose `/ (root)`.
+6. Save and wait for GitHub to provide the public URL.
 
 Keep the file and folder names unchanged after publishing, because the website uses relative paths.
 
 ## Important GitHub Pages privacy rule
 
-GitHub Pages is a public website. The uploadable `site.data.js` is intentionally public. Never place passwords, API keys, private addresses, or sensitive documents in frontend files; visitors can download them from the browser.
+GitHub Pages is a public website. The local Supabase configuration is ignored in this project. GitHub Pages will therefore use the demo fallback unless you configure a public frontend deployment with the Supabase publishable key. Never place a service-role key, passwords, private addresses, or sensitive documents in frontend files; visitors can download them from the browser.
