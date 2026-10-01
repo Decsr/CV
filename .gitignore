@@ -1,9 +1,11 @@
 # Local personal profile data. Never commit this file.
 site.private.js
 site.data.js
+portfolio-content.json
 
 # Supabase connection settings. Keep project credentials out of Git.
 supabase-config.js
+seed-supabase.js
 
 # Private documents. Add them locally only when you do not want them public.
 cv.pdf
