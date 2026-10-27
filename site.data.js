@@ -93,7 +93,7 @@ window.SITE_DATA = {
       ],
       challenge: "Keeping a multi-agent pipeline structured and resumable, with human approval before code is written, while the output of the underlying models is unpredictable.",
       contribution: "Author of the whole project: the pipeline orchestration, the Bubble Tea terminal UI and headless mode, the CLI and local-model runners, and project memory in Markdown indexed with SQLite FTS5/BM25 (optional embeddings). Set up GitHub Actions CI (build, vet, gofmt, race tests on Linux and macOS) and GoReleaser releases for Linux, macOS, and Windows on amd64 and arm64. MIT licensed.",
-      image: "assets/projects/decsr-code.svg",
+      image: "assets/projects/decsr-code-ui.png",
       github: "https://github.com/Decsr/Decsr-Code",
       demo: ""
     },
