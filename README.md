@@ -4,7 +4,7 @@ This is a zero-build static website. Open `index.html` for the CV and `photograp
 
 ## Add your content
 
-Your local customized portfolio data is in `site.data.js`. It is ignored because it contains personal contact information. The committed `site.js` fallback contains demo content only.
+The portfolio content is in `site.data.js`. It holds the public content shown on the site, so it is committed and must not contain private data such as phone numbers. The `site.js` fallback contains demo content only.
 
 For local-only private testing, keep `site.data.js`, `site.private.js`, and `supabase-config.js` in the project folder. All three are ignored by Git and must never be committed.
 
