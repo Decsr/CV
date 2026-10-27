@@ -81,6 +81,23 @@ window.SITE_DATA = {
   },
   projects: [
     {
+      name: "Decsr-Code — Multi-Agent Coding Pipeline",
+      short: "An open-source Go tool that drives specialist AI agents through a structured, resumable pipeline from task spec to reviewed code.",
+      role: "Author · Open-source solo project",
+      stack: ["Go", "Bubble Tea", "SQLite FTS5", "GitHub Actions", "GoReleaser"],
+      features: [
+        "Agents for PM, Coder, QA, UX Review, and Security working through a pipeline: context pack, task spec negotiation, decomposition, TDD implementation, global build/test/fix, and quality review",
+        "Human approval gates before code is written, and resumable runs with sub-tasks tracked as beads",
+        "Terminal UI built with Bubble Tea, plus a headless plain-text mode",
+        "Runs on CLI runners (OpenCode, Claude CLI, Codex CLI, GitHub Copilot CLI) or local model servers (Ollama, LM Studio, MLX)"
+      ],
+      challenge: "Keeping a multi-agent pipeline structured and resumable, with human approval before code is written, while the output of the underlying models is unpredictable.",
+      contribution: "Author of the whole project: the pipeline orchestration, the Bubble Tea terminal UI and headless mode, the CLI and local-model runners, and project memory in Markdown indexed with SQLite FTS5/BM25 (optional embeddings). Set up GitHub Actions CI (build, vet, gofmt, race tests on Linux and macOS) and GoReleaser releases for Linux, macOS, and Windows on amd64 and arm64. MIT licensed.",
+      image: "assets/projects/decsr-code.svg",
+      github: "https://github.com/Decsr/Decsr-Code",
+      demo: ""
+    },
+    {
       name: "Novelle — AI-Powered Multilingual Novel Platform",
       short: "A scalable microservice platform for publishing, translating, and monetizing digital novels.",
       role: "Backend Developer",
